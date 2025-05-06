@@ -41,8 +41,7 @@ npm install
 
 ###  3. Run the Development Server
 Start the development server:
-``` npm run dev
-```
+``` npm run dev ```
 Visit http://localhost:3000 in your browser to view the portfolio.
 
 ## 🔨 Build & Deploy
