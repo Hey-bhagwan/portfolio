@@ -1,8 +1,7 @@
-import  { useState } from 'react';
-
-
+import { useState } from 'react';
 
 const ContactForm = () => {
+  // Initialize form data using useState hook
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -10,19 +9,21 @@ const ContactForm = () => {
     message: ''
   });
 
-  const handleChange = (e: { target: {
-      [x: string]: any; value: String 
-}; }) => {
+  // Handle input changes for all form fields
+  const handleChange = (e: { target: { name: string; value: string } }) => {
     setFormData(prev => ({
       ...prev,
       [e.target.name]: e.target.value
     }));
   };
 
-  const handleSubmit = () => {
-     console.log('Form submitted:', formData);
-    // You can add actual submission logic here
-    alert('Functon not available right now.');
+  // Handle form submission
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Prevent default form behavior
+    console.log('Form submitted:', formData); // For now, just log the data
+    alert('Function not available right now.');
+
+    // Reset form fields
     setFormData({
       name: '',
       email: '',
@@ -32,7 +33,11 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="bg-black p-6 max-w-[80%] mx-auto space-y-4 text-white ">
+    <form
+      onSubmit={handleSubmit}
+      className="bg-black p-6 max-w-[80%] mx-auto space-y-4 text-white"
+    >
+      {/* Name Field */}
       <div>
         <label className="block text-sm mb-1">Name</label>
         <input
@@ -44,6 +49,8 @@ const ContactForm = () => {
           placeholder="Ayush Upadhyay"
         />
       </div>
+
+      {/* Email Field */}
       <div>
         <label className="block text-sm mb-1">Email</label>
         <input
@@ -54,6 +61,8 @@ const ContactForm = () => {
           className="w-full p-2 rounded bg-gray-800 text-white"
         />
       </div>
+
+      {/* Subject Field */}
       <div>
         <label className="block text-sm mb-1">Subject</label>
         <input
@@ -64,6 +73,8 @@ const ContactForm = () => {
           className="w-full p-2 rounded bg-gray-800 text-white"
         />
       </div>
+
+      {/* Message Field */}
       <div>
         <label className="block text-sm mb-1">Message</label>
         <textarea
@@ -74,6 +85,8 @@ const ContactForm = () => {
           className="w-full p-2 rounded bg-gray-800 text-white"
         />
       </div>
+
+      {/* Submit Button */}
       <button
         type="submit"
         className="bg-lime-300 text-black px-6 py-2 rounded-full hover:bg-lime-400 transition"
