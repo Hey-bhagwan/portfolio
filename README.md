@@ -1,54 +1,60 @@
-# React + TypeScript + Vite
+# Portfolio - Personal Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio! This website is built using React, TypeScript, and Tailwind CSS. It serves as a showcase of my web development skills, projects, and experience.
 
-Currently, two official plugins are available:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Technologies Used
 
-## Expanding the ESLint configuration
+- React - For building the user interface
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- TypeScript - For static type checking and improving the development experience
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+- Tailwind CSS - A utility-first CSS framework for styling
+
+- Vite - A fast and optimized build tool for development
+
+
+## 🌐 Features
+
+- Responsive Design: The portfolio is fully responsive and looks great on both desktop and mobile devices.
+
+- Interactive Projects: Demonstrates several of my personal and professional projects with live links (if available) and descriptions.
+
+- Easy Navigation: Clean layout with sections for About Me, Projects, and Contact.
+
+- Fast Performance: Optimized with modern tools for a smooth and fast user experience.
+
+
+## 🚀 Getting Started
+
+To get started with this project locally, follow these steps:
+
+### 1. Clone the repository
+Clone this repository to your local machine:
+```git clone https://github.com/Hey-bhagwan/portfolio.git```
+
+### 2. Install Dependencies
+Navigate to the project directory and install the required dependencies:
+``` cd portfolio
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+###  3. Run the Development Server
+Start the development server:
+``` npm run dev
 ```
+Visit http://localhost:3000 in your browser to view the portfolio.
+
+## 🔨 Build & Deploy
+
+To create a production build, run
+```npm run build```
+You can deploy this app using platforms like Vercel or Netlify for easy hosting and continuous deployment from GitHub.
+
+## 📩 Contact
+
+Email: ayushupa29@gmail.com
+
+LinkedIn: https://www.linkedin.com/in/ayush-upadyay
+
+GitHub: https://github.com/Hey-bhagwan
